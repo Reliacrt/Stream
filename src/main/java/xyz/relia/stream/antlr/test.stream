@@ -1,0 +1,39 @@
+                        [x] [int, float]
+                        [tt] [int -> int]
+                        [ttt] [int, {[int, float]} -> int]
+
+                        [_ byte -> file -> _ byte] {
+
+                            [a int, b int, c int -> three_plus -> d int]{
+                            	a, b -> plus -> e
+                            	c, e -> plus -> d
+                            }
+
+                            [c x -> pl -> d float]{
+                            	c -> x -> a, b
+                            	a -> float -> e
+                            	e, b -> plus -> d
+                            }
+
+                            [x int -> pl1 -> func tt]{
+                            	[a int -> f -> c int]{
+                            		a, x -> plus -> c
+                            	}
+                            	f -> wrap -> func
+                            }
+
+                            [f1 tt, f2 tt -> func -> f3 tt] {
+                                [x int -> func -> y int] {
+                                    x -> f1 -> t
+                                    t -> f2 -> y
+                                }
+                                func -> wrap -> f3
+                            }
+
+                            "Helloworld" -> byteflow
+                            1 -> n1
+                            2 -> n2
+                            3 -> n3
+                            n1, n2, n3 -> three_plus -> n4
+                            byteflow, n4 -> ToConsole -> _
+                        }
