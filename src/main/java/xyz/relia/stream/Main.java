@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
+
         var s = """
                         [x] [int, float]
                         [tt] [int -> int]
@@ -107,5 +108,29 @@ public class Main {
                 """;
         var parser = ParserBuilder.from(antlrStream);
         new StreamVisitorImpl().visitStream(parser.stream());
+
+        var testProgram = """
+                
+                [stdin byte -> file -> stdout byte] {
+                    1 -> forever -> one
+                    10 -> forever -> ten
+                    [a int, b int -> print_formula -> str string] {
+                        a, b -> multiply -> c
+                        a, b, c -> string -> as, bs, cs
+                        as, "*", bs, "=", cs -> concat -> str
+                    }
+                    [from int, to int, step int, f int_func -> range -> out int] {
+                        from -> once -> start
+                        start, index -> merge -> i
+                        i -> f -> index
+                        step -> forever -> d
+                        to -> forever -> t
+                        i, d -> plus -> next
+                        next, t -> less -> b
+                        next, b -> branch -> index, out
+                    }
+                }
+                
+                """;
     }
 }

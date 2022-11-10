@@ -88,6 +88,26 @@ public class StreamListenerImpl implements StreamListener {
     }
 
     @Override
+    public void enterSwitchStream(StreamParser.SwitchStreamContext ctx) {
+
+    }
+
+    @Override
+    public void exitSwitchStream(StreamParser.SwitchStreamContext ctx) {
+
+    }
+
+    @Override
+    public void enterUnwrapStream(StreamParser.UnwrapStreamContext ctx) {
+
+    }
+
+    @Override
+    public void exitUnwrapStream(StreamParser.UnwrapStreamContext ctx) {
+
+    }
+
+    @Override
     public void enterTypedNames(StreamParser.TypedNamesContext ctx) {
 
     }
@@ -164,6 +184,46 @@ public class StreamListenerImpl implements StreamListener {
 
     @Override
     public void exitType(StreamParser.TypeContext ctx) {
+
+    }
+
+    @Override
+    public void enterOriginalType(StreamParser.OriginalTypeContext ctx) {
+
+    }
+
+    @Override
+    public void exitOriginalType(StreamParser.OriginalTypeContext ctx) {
+
+    }
+
+    @Override
+    public void enterStreamType(StreamParser.StreamTypeContext ctx) {
+
+    }
+
+    @Override
+    public void exitStreamType(StreamParser.StreamTypeContext ctx) {
+
+    }
+
+    @Override
+    public void enterStructType(StreamParser.StructTypeContext ctx) {
+
+    }
+
+    @Override
+    public void exitStructType(StreamParser.StructTypeContext ctx) {
+
+    }
+
+    @Override
+    public void enterFunctionType(StreamParser.FunctionTypeContext ctx) {
+
+    }
+
+    @Override
+    public void exitFunctionType(StreamParser.FunctionTypeContext ctx) {
 
     }
 
