@@ -5,9 +5,12 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class TestFunction {
+import org.junit.Test;
 
-    public static void main(String[] args) {
+public class MainTest {
+
+    @Test
+    public void testFunc() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(8);
